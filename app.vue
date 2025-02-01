@@ -1,6 +1,10 @@
+<script setup lang="ts">
+  // Use SSR-safe IDs for Headless UI to avoid hydration errors
+  provideHeadlessUseId(() => useId())
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
